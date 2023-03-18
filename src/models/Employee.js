@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const JOBS = ["CASHIER", "MANAGER", "BARMEN"];
 
-var EmployeeSchema = new mongoose.Schema({
+const EmployeeSchema = new mongoose.Schema({
   firstName: {
     type: String,
     required: true,
