@@ -33,7 +33,7 @@ module.exports = new GraphQLObjectType({
       async resolve(parent, args) {
         const dataArray = [];
         for (const element of parent.employees) {
-          var data = await Employee.findById(element);
+          const data = await Employee.findById(element);
           if (data) dataArray.push(data);
         }
         return dataArray;
@@ -42,9 +42,9 @@ module.exports = new GraphQLObjectType({
     clients: {
       type: new GraphQLList(ClientType),
       async resolve(parent, args) {
-        var dataArray = [];
+        const dataArray = [];
         for (const element of parent.clients) {
-          var data = await Client.findById(element);
+          const data = await Client.findById(element);
           if (data) dataArray.push(data);
         }
         return dataArray;
